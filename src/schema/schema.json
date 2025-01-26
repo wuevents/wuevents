@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://events.wue.social/schema.json",
+  "title": "wuevents",
+  "description": "A description of wuevents.",
+  "type": "object",
+  "properties": {
+    "created": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "address": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "url", "address"]
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "doors": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": ["created", "venue", "events"]
+}
+
